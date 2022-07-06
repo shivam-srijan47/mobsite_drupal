@@ -121,3 +121,8 @@ grumphp.yml
 sites/all/README.txt
 sites/all/modules/README.txt
 sites/all/themes/README.txt
+
+#ignore db
+/db
+
+web/sites/default/settings.php
