@@ -1,0 +1,15 @@
+{
+  "name": "tokyo",
+  "version": "1.0.0",
+  "description": "A custom theme",
+  "main": "index.js",
+  "scripts": {
+    "convert-css": "sass scss/styles.scss css/styles.css",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Shivam Kumar",
+  "license": "ISC",
+  "dependencies": {
+    "sass": "^1.53.0"
+  }
+}

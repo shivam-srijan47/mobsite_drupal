@@ -21,7 +21,6 @@ web/libraries
 drush/Commands
 # Ignore custom theme build artifacts
 web/themes/custom/*/node_modules
-web/themes/custom/*/css
 web/themes/custom/*/styleguide
 # Ignore build artifacts
 deployment_identifier
