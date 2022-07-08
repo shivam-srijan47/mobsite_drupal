@@ -1,0 +1,59 @@
+{#
+/**
+ * @file
+ * Theme override to display a menu.
+ *
+ * Available variables:
+ * - menu_name: The machine name of the menu.
+ * - items: A nested list of menu items. Each menu item contains:
+ *   - attributes: HTML attributes for the menu item.
+ *   - below: The menu item child items.
+ *   - title: The menu link title.
+ *   - url: The menu link url, instance of \Drupal\Core\Url
+ *   - localized_options: Menu link localized options.
+ *   - is_expanded: TRUE if the link has visible children within the current
+ *     menu tree.
+ *   - is_collapsed: TRUE if the link has children within the current menu tree
+ *     that are not currently visible.
+ *   - in_active_trail: TRUE if the link is in the active trail.
+ */
+#}
+
+<nav class="navbar navbar-expand-lg bg-light">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="{{ path('<front>') }}">
+        <img src="/themes/custom/tokyo/logo.svg" alt="{{ 'Home'|t }}" style="height:40px; width:auto" />
+        {# <span class="brand-text">{{ site_name }}</span> #}
+        <span class="brand-text">Mobile Shop</span>
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        {% for item in items %}
+            <li{{ item.attributes }} class="nav-item">
+            <a href={{item.url}} class="nav-link">{{item.title}}</a>
+            {% if item.below %}
+                {{ menus.menu_links(item.below, attributes, menu_level + 1) }} 
+            {% endif %}
+            </li>
+        {% endfor %}
+      </ul>
+    <ul class="d-flex navbar-nav ms-auto mb-2 mb-lg-0">
+        {% if logged_in %}
+            <li class="nav-item">
+                <a href="/user" class="nav-link" data-drupal-link-system-path="user">My Account</a>
+            </li>
+            <li class="nav-item">
+                <a href="/user/logout" class="btn btn-outline-danger" data-drupal-link-system-path="user/logout">Logout</a>
+            </li>
+        {% else %}
+            <li class="nav-item">
+                <a href="/user/login" class="btn btn-outline-success" data-drupal-link-system-path="user/login">Login</a>
+            </li>
+        {% endif %}
+    </ul> 
+    </div>
+  </div>
+</nav>

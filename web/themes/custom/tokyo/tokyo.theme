@@ -1,0 +1,17 @@
+<?php
+// use Drupal\node\NodeInterface;
+use \Drupal\block_content\BlockContentInterface;
+
+    /**
+    * @file
+    * Functions to support theming in the Icecream theme.
+    * ! Using theme files, we can provide any variable to templates.
+    * ! Modifying some variable coming from backend
+    * ! Adding or altering theme hook suggestion
+    */
+
+    function tokyo_preprocess_menu(&$variables) {
+        $variables['site_name'] = \Drupal::config('system.site')->get('name');
+        $logged_in = \Drupal::currentUser()->isAuthenticated();
+        $variables['logged_in'] = $logged_in;
+    }

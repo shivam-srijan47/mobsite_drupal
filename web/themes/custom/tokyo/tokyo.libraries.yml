@@ -17,4 +17,7 @@ external-libs:
   js:
     https://code.jquery.com/jquery-3.6.0.min.js:
       { type: external, minified: true }
+    https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js:
+      { type: external, minified: true }
+
 
