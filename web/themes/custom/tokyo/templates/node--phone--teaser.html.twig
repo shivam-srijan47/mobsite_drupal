@@ -1,0 +1,30 @@
+<article{{attributes}}>
+	<div{{content_attributes}}>
+		{# <div class="card shadow-sm" style="width: 18rem;"> #}
+		<div class="card shadow-sm">
+		{{content.field_phone_image}}
+			<div class="card-body">
+				<h5 class="card-title">{{content.field_phone_name.0}}</h5>
+				<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+			</div>
+			<ul class="list-group list-group-flush">
+				<li class="list-group-item">{{content.field_features.0}}</li>
+				<li class="list-group-item">{{content.field_features.1}}</li>
+				<li class="list-group-item">{{content.field_features.2}}</li>
+				<li class="list-group-item">{{content.field_features.3}}</li>
+			</ul>
+			<div class="card-footer p-0">
+				<div class="container-fluid">
+					<div class="row text-center align-items-center h-100">
+						<div class="card__btn__outline col-sm-6">
+							<a class="btn p-3" href="#">Add to cart</a>
+						</div>
+						<div class="card__btn__cta col-sm-6">
+							<a class="btn p-3" href="#">Buy Now</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</article>

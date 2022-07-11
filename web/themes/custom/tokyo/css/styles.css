@@ -1,3 +1,87 @@
+.footer {
+  background-color: #6542f1;
+}
+.footer__header {
+  color: #ffffff;
+  margin-bottom: 15px;
+}
+.footer__link {
+  padding: 3px;
+}
+.footer__link a {
+  color: #ffffff;
+  text-decoration: none;
+}
+.footer__link a:hover {
+  color: #d3d3d3;
+}
 
+.copyright_info {
+  height: fit-content;
+  background-color: #7c7c7c;
+  font-size: smaller;
+}
+
+.card {
+  border-radius: 0 !important;
+}
+
+.card__btn__outline {
+  background: #ffffff;
+  height: 100%;
+  padding: 0;
+  outline: none;
+  border: none;
+}
+
+.card__btn__outline a {
+  color: #6542f1;
+  text-decoration: none;
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  outline: none;
+  border: none;
+}
+
+.card__btn__outline a:hover {
+  color: #6542f1;
+}
+
+.card__btn__cta {
+  height: 100%;
+  padding: 0;
+  outline: none;
+  border: none;
+  background-color: #6542f1;
+}
+
+.card__btn__cta:hover {
+  background-color: #6542f1;
+  outline: none;
+  border: none;
+}
+
+.card__btn__cta a {
+  color: #ffffff;
+  text-decoration: none;
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  outline: none;
+  border: none;
+}
+
+.card__btn__cta a:hover {
+  color: #ffffff;
+  outline: none;
+  border: none;
+}
 
 /*# sourceMappingURL=styles.css.map */

@@ -1,3 +1,88 @@
 // .navbar-collapse{
 //     flex-grow:unset !important;
 // }
+$color1 : #6542f1;
+$color2 : #ffffff;
+$color3 : #7c7c7c;
+.footer {
+    // $self: &;
+    background-color: $color1;
+    &__header {
+        color: $color2;
+        margin-bottom: 15px;
+    }
+    &__link {
+        padding: 3px;
+        a {
+            color: $color2;
+            text-decoration: none;
+        }
+        a:hover {
+            color:#d3d3d3;
+        }
+    }
+    }
+.copyright_info {
+    height: fit-content;
+    background-color: $color3;
+    font-size: smaller;
+}
+
+//Card- of each phone display
+
+.card{
+  border-radius: 0 !important;
+}
+.card__btn__outline {
+    background: $color2;
+    height: 100%;
+    padding: 0;
+    outline: none;
+    border: none;
+  }
+  .card__btn__outline a {
+    color: $color1;
+    text-decoration: none;
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    outline: none;
+    border: none;
+  }
+  .card__btn__outline a:hover {
+    color: $color1;
+  }
+  .card__btn__cta {
+    height: 100%;
+    padding: 0;
+    outline: none;
+    border: none;
+    background-color: $color1;
+    // transition: var(--transition-quick);
+  }
+  .card__btn__cta:hover {
+    background-color: $color1;
+    outline: none;
+    border: none;
+  }
+  
+  .card__btn__cta a {
+    color: $color2;
+    text-decoration: none;
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    outline: none;
+    border: none;
+  }
+  .card__btn__cta a:hover {
+    color: $color2;
+    outline: none;
+    border: none;
+  }

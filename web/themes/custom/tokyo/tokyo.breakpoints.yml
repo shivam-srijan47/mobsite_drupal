@@ -6,13 +6,13 @@ tokyo.mobile:
     - 1x
 tokyo.narrow:
   label: narrow
-  mediaQuery: 'all and (min-width: 560px) and (max-width: 850px)'
+  mediaQuery: 'all and (min-width: 767px) and (max-width: 1200px)'
   weight: 1
   multipliers:
     - 1x
 tokyo.wide:
   label: wide
-  mediaQuery: 'all and (min-width: 851px)'
+  mediaQuery: 'all and (min-width: 1200px)'
   weight: 2
   multipliers:
     - 1x
