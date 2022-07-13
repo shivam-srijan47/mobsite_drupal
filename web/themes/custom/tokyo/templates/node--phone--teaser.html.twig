@@ -1,27 +1,33 @@
-<article{{attributes}}>
-	<div{{content_attributes}}>
-		{# <div class="card shadow-sm" style="width: 18rem;"> #}
-		<div class="card shadow-sm">
-		{{content.field_phone_image}}
-			<div class="card-body">
-				<h5 class="card-title">{{content.field_phone_name.0}}</h5>
-				<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+{# <div class="col"> #}
+{# {{kint(content)}} #}
+{# {{content['links']['#lazy_builder'][1][0]}} #}
+	<article{{attributes}} style="margin:5px "> <div class="card shadow-sm" style="max-width:25rem">
+		<div class="d-flex justify-content-center">
+			{{content.field_phone_image}}
+		</div>
+		<div class="card-body">
+			<div class="d-flex justify-content-between align-items-center">
+				<h5 class="card-title m-0 card__phone_name">{{content.field_phone_name.0}}</h5>
+				<h6 class="card-title m-0 px-2">{{content.field_phone_price.0}}</h6>
 			</div>
-			<ul class="list-group list-group-flush">
-				<li class="list-group-item">{{content.field_features.0}}</li>
-				<li class="list-group-item">{{content.field_features.1}}</li>
-				<li class="list-group-item">{{content.field_features.2}}</li>
-				<li class="list-group-item">{{content.field_features.3}}</li>
-			</ul>
-			<div class="card-footer p-0">
-				<div class="container-fluid">
-					<div class="row text-center align-items-center h-100">
-						<div class="card__btn__outline col-sm-6">
-							<a class="btn p-3" href="#">Add to cart</a>
-						</div>
-						<div class="card__btn__cta col-sm-6">
-							<a class="btn p-3" href="#">Buy Now</a>
-						</div>
+			<div class="m-0">
+				{{content.links}}
+			</div>
+		</div>
+		<ul class="list-group list-group-flush">
+			<li class="list-group-item">{{content.field_features.0}}</li>
+			<li class="list-group-item">{{content.field_features.1}}</li>
+			<li class="list-group-item">{{content.field_features.2}}</li>
+			<li class="list-group-item">{{content.field_features.3}}</li>
+		</ul>
+		<div class="card-footer p-0">
+			<div class="container-fluid">
+				<div class="row text-center align-items-center h-100">
+					<div class="card__btn card__btn__outline col-sm-6">
+						<a class="btn p-3 card__link" id="addtocart" href="#">Add to cart</a>
+					</div>
+					<div class="card__btn card__btn__cta col-sm-6">
+						<a class="btn p-3 card__link" id="buynow" href="#">Buy Now</a>
 					</div>
 				</div>
 			</div>

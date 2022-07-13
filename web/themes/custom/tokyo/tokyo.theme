@@ -15,3 +15,12 @@ use \Drupal\block_content\BlockContentInterface;
         $logged_in = \Drupal::currentUser()->isAuthenticated();
         $variables['logged_in'] = $logged_in;
     }
+
+    /**
+     * Implements hook_preprocess_links().
+    */
+    function tokyo_preprocess_links(&$variables) {
+    if (isset($variables['links']['node-readmore'])) {
+      $variables['links']['node-readmore']['link']['#title'] = t('Know more');
+    }
+}
