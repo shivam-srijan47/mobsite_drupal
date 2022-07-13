@@ -69,13 +69,26 @@
 
 .about__container {
   display: flex;
+  height: min-content;
 }
 .about__container__sidebar {
-  width: 30%;
+  height: 80vh;
+  width: 20vw;
+  display: flex;
+  flex-direction: column;
+}
+.about__container .first_half {
+  flex: 1;
+}
+.about__container .second_half {
+  flex: 1;
 }
 .about__container__main {
   flex: 1;
   overflow: auto;
+}
+.about__container p {
+  color: #7c7c7c;
 }
 
 .footer {

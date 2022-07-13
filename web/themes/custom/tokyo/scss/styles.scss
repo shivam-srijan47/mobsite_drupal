@@ -80,13 +80,26 @@ $color3 : #7c7c7c;
 .about{
   &__container {
     display: flex;
+    height: min-content;
     &__sidebar {
-    width: 30%;
-    }
-    &__main {
-      flex: 1;
-      overflow: auto;
-    }
+    height:80vh;
+    width: 20vw;
+    display: flex;
+    flex-direction: column;
+  }
+  .first_half{
+    flex: 1;
+  }
+  .second_half{
+    flex:1;
+  }
+  &__main {
+    flex: 1;
+    overflow: auto;
+  }
+  & p{
+    color: $color3;
+  }
   }
 }
 
