@@ -1,21 +1,21 @@
-.card {
+.phone_card_container .card {
   border-radius: 0 !important;
 }
-.card__btn {
+.phone_card_container .card__btn {
   height: 100%;
   padding: 0;
   outline: none;
   border: none;
 }
-.card__btn__outline {
+.phone_card_container .card__btn__outline {
   background-color: #ffffff;
 }
-.card__btn__cta, .card__btn__cta:hover {
+.phone_card_container .card__btn__cta, .phone_card_container .card__btn__cta:hover {
   background-color: #6542f1;
   border: none;
   outline: none;
 }
-.card__link {
+.phone_card_container .card__link {
   text-decoration: none;
   width: 100%;
   height: 100%;
@@ -26,29 +26,29 @@
   outline: none;
   border: none;
 }
-.card__link#addtocart {
+.phone_card_container .card__link#addtocart {
   color: #6542f1;
 }
-.card__link#addtocart:hover, .card__link#addtocart:active, .card__link#addtocart:focus {
+.phone_card_container .card__link#addtocart:hover, .phone_card_container .card__link#addtocart:active, .phone_card_container .card__link#addtocart:focus {
   border: none;
   outline: none;
 }
-.card__link#buynow {
+.phone_card_container .card__link#buynow {
   color: #ffffff;
 }
-.card__link#buynow:hover, .card__link#buynow:active, .card__link#buynow:focus {
+.phone_card_container .card__link#buynow:hover, .phone_card_container .card__link#buynow:active, .phone_card_container .card__link#buynow:focus {
   border: none;
   outline: none;
 }
-.card a {
+.phone_card_container a {
   color: #7c7c7c;
   font-size: smaller;
   text-decoration: none;
 }
-.card a:hover {
+.phone_card_container a:hover {
   color: #6542f1;
 }
-.card__phone_name {
+.phone_card_container__phone_name {
   white-space: nowrap;
   width: min-content;
   overflow: hidden;
@@ -113,6 +113,37 @@
   height: fit-content;
   background-color: #7c7c7c;
   font-size: smaller;
+}
+
+.carousel {
+  background: #EEE;
+}
+
+.carousel-cell {
+  width: 66%;
+  height: 200px;
+  margin-right: 10px;
+  background: #8C8;
+  border-radius: 5px;
+  counter-increment: carousel-cell;
+}
+
+.grid-container {
+  columns: 5 200px;
+  column-gap: 1.5rem;
+  width: 90%;
+  margin: 0 auto;
+}
+.grid-container div {
+  display: inline-block;
+  width: 100%;
+  /* border: solid 1px black; */
+  padding: 5px;
+  border-radius: 8px;
+}
+.grid-container div img {
+  width: 50%;
+  border-radius: 50%;
 }
 
 /*# sourceMappingURL=styles.css.map */

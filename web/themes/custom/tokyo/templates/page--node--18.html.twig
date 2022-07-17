@@ -1,0 +1,72 @@
+<div class="layout-container">
+	<header role="banner">
+		{{ page.header }}
+	</header>
+	{{ page.primary_menu }}
+	{{ page.secondary_menu }}
+	{{ page.highlighted }}
+
+	{{ page.help }}
+
+	<main role="main">
+		<a id="main-content" tabindex="-1"></a>
+		{# link is in html.html.twig #}
+
+		<div class="layout-content">
+			<div class="about">
+				<div
+					class="about__container">
+					<!-- Sidebar -->
+					<aside class="about__container__sidebar ">
+						<div class="first_half p-2 p-md-4">
+							<h1>Testimonials</h1>
+						</div>
+					</aside>
+
+					<!-- Main -->
+					<main class="about__container__main p-2 p-md-4">
+						<h3>What users say</h3>
+						{# <div class="carousel" data-flickity='{ "freeScroll": true }'> #}
+						<div id="carousel1" class="carousel slide" data-bs-ride="carousel">
+							<div class="carousel-inner">
+								{{page.content}}
+							</div>
+							<button class="carousel-control-prev" type="button" data-bs-target="#carousel1" data-bs-slide="prev">
+								<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+								<span class="visually-hidden">Previous</span>
+							</button>
+							<button class="carousel-control-next" type="button" data-bs-target="#carousel1" data-bs-slide="next">
+								<span class="carousel-control-next-icon" aria-hidden="true"></span>
+								<span class="visually-hidden">Next</span>
+							</button>
+						</div>
+						{# </div> #}
+						<h3 class="p-4 ps-0">More</h3>
+						<div class="more-cards">
+							<div class="grid-container">
+								{% for review in reviews %}
+									<div class="card mb-3" style="max-width: 540px;">
+										<div class="row g-0">
+											<div class="col-sm-4">
+												<img src="{{directory}}{{review['photo']}}" class="img-fluid img-circle mx-auto d-block" alt="...">
+											</div>
+											<div class="col-sm-8">
+												<div class="card-body">
+													<h5 class="card-title">{{review['name']}}</h5>
+													<p class="card-text">{{review['review']}}</p>
+													<p class="card-text">
+														<small class="text-muted">Last updated 3 mins ago</small>
+													</p>
+												</div>
+											</div>
+										</div>
+									</div>
+								{% endfor %}
+							</div>
+						</div>
+					</main>
+				</div>
+			</div>
+		</div>
+	</main>
+</div>

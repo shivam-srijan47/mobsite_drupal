@@ -24,3 +24,66 @@ use \Drupal\block_content\BlockContentInterface;
       $variables['links']['node-readmore']['link']['#title'] = t('Know more');
     }
 }
+    function tokyo_preprocess_page(&$variables) {
+    $variables['reviews'] = array(
+      [
+        'name' => 'Sara Vieira',
+        'photo' => '/images/sara.jpg',
+        'review'=>'I have no design skills and with. I ever wanted in a CSS framework.'],
+      [
+        'name'=>'Ben',
+        'photo' => '/images/ben.jpg',
+        'review'=>'With this I can offer my clients faster turnaround times on custom WordPress themes, both for initial builds and for future revisions.'
+      ],
+      [
+        'name'=> 'Merrel Whelpdale',
+        'photo'=>'/images/user4.jpg',
+        'review'=> 'In quis justo. Maecenas rhoncus aliquam lacus. Morbi quis tortor id nulla ultrices aliquet.'
+      ],
+      [
+        'name'=> 'Ailee Adamek',
+        'photo'=>'/images/user2.jpg',
+        'review'=> 'Cum sociis natoque penatibus et magnis dis parturient montes.'
+      ],
+      [
+        'name'=> 'Arluene Ackland',
+        'photo'=>'/images/user3.jpg',
+        'review'=> 'Nullam sit amet turpis elementum ligula vehicula consequat. Morbi a ipsum. Integer a nibh.'
+      ],
+      [
+        'name'=> 'Papageno Dunan',
+        'photo'=>'/images/user1.jpg',
+        'review'=> 'Vestibulum quam sapien, varius ut, blandit non, interdum in, ante. Vestibulum ante ipsum primis inuis faucibus accumsan odio. Curabitur convallis.'
+      ],
+      [
+        'name'=> 'Nappie Stubbings',
+        'photo'=>'/images/user5.jpg',
+        'review'=> 'Sed sagittis. Nam congue, risus semper porta volutpat, quam pede lobortis ligula, sit amet eleifend pede libero quis orci. Nullam molestie nibh in lectus.'
+      ],
+      [
+        'name'=> 'West Charters',
+        'photo'=>'/images/user1.jpg',
+        'review'=> 'Duis consequat dui nec nisi volutpat eleifend. Donec ut dolor. Morbi vel lectus in quam fringilla rhoncus.'
+      ],
+      [
+        'name'=> 'Silvana Potticary',
+        'photo'=>'/images/user2.jpg',
+        'review'=> 'Proin eu mi. Nulla ac enim. In tempor, turpis nec euismod scelerisque,'
+      ],
+      [
+        'name'=> 'Jeremie Symper',
+        'photo'=>'/images/user4.jpg',
+        'review'=> 'Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Vivamus vestibulum sagittis sapien. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.'
+      ],
+      [
+        'name'=> 'Mattie Orrock',
+        'photo'=>'/images/user5.jpg',
+        'review'=> 'Maecenas leo odio, condimentum id, luctus nec, molestie sed, justo. Pellentesque viverra pede ac diam. Cras pellentesque volutpat dui.'
+      ],
+      [
+        'name'=> 'Sheri Schnitter',
+        'photo'=>'/images/user3.jpg',
+        'review'=> 'Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Vivamus vestibulum sagittis sapien. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.'
+      ]
+    );
+}

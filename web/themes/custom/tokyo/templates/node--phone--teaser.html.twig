@@ -1,8 +1,8 @@
 {# <div class="col"> #}
 {# {{kint(content)}} #}
 {# {{content['links']['#lazy_builder'][1][0]}} #}
-	<article{{attributes}} style="margin:5px "> <div class="card shadow-sm" style="max-width:25rem">
-		<div class="d-flex justify-content-center">
+	<article{{attributes.addClass('phone_card_container')}} style="margin:5px"> <div class="card shadow-sm" style="max-width:25rem">
+		<div class="d-flex justify-content-center p-2">
 			{{content.field_phone_image}}
 		</div>
 		<div class="card-body">

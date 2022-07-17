@@ -20,40 +20,50 @@
 #}
 
 <nav class="navbar navbar-expand-lg bg-light">
-  <div class="container-fluid">
-    <a class="navbar-brand" href="{{ path('<front>') }}">
-        <img src="/themes/custom/tokyo/logo.svg" alt="{{ 'Home'|t }}" style="height:40px; width:auto" />
-        {# <span class="brand-text">{{ site_name }}</span> #}
-        <span class="brand-text">Mobile Shop</span>
-    </a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-        {% for item in items %}
-            <li{{ item.attributes }} class="nav-item">
-            <a href={{item.url}} class="nav-link">{{item.title}}</a>
-            {% if item.below %}
-                {{ menus.menu_links(item.below, attributes, menu_level + 1) }} 
-            {% endif %}
-            </li>
-        {% endfor %}
-      </ul>
-    <ul class="d-flex navbar-nav ms-auto mb-2 mb-lg-0">
-        {% if logged_in %}
-            <li class="nav-item">
-                <a href="/user" class="nav-link" data-drupal-link-system-path="user">My Account</a>
-            </li>
-            <li class="nav-item">
-                <a href="/user/logout" class="btn btn-outline-danger" data-drupal-link-system-path="user/logout">Logout</a>
-            </li>
-        {% else %}
-            <li class="nav-item">
-                <a href="/user/login" class="btn btn-outline-success" data-drupal-link-system-path="user/login">Login</a>
-            </li>
-        {% endif %}
-    </ul> 
-    </div>
-  </div>
+	<div class="container-fluid">
+		<a class="navbar-brand" href="{{ path('<front>') }}">
+			<img
+			src="/themes/custom/tokyo/logo.svg" alt="{{ 'Home'|t }}" style="height:40px; width:auto"/>
+			{# <span class="brand-text">{{ site_name }}</span> #}
+			<span class="brand-text">Mobile Shop</span>
+		</a>
+		<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+		<div class="collapse navbar-collapse" id="navbarSupportedContent">
+			<ul class="navbar-nav me-auto mb-2 mb-lg-0">
+				{% for item in items %}
+					<li{{item.attributes}} class="nav-item">
+						<a href={{item.url}} class="nav-link">{{item.title}}</a>
+						{% if item.below %}
+							{{ menus.menu_links(item.below, attributes, menu_level + 1) }}
+						{% endif %}
+					</li>
+				{% endfor %}
+			</ul>
+			<form action="/search/node" method="get" id="search-block-form" accept-charset="UTF-8" class="d-flex">
+				<div class="js-form-item form-item js-form-type-search form-item-keys js-form-item-keys form-no-label">
+					<label for="edit-keys" class="visually-hidden">Search</label>
+					<input class="form-control" title="Enter the terms you wish to search for." data-drupal-selector="edit-keys" type="search" id="edit-keys" name="keys" value="" size="15" maxlength="128" class="form-search">
+				</div>
+				<div data-drupal-selector="edit-actions" class="form-actions js-form-wrapper form-wrapper" id="edit-actions">
+					<input data-drupal-selector="edit-submit" type="submit" id="edit-submit" value="Search" class="ms-2 btn btn-outline-success js-form-submit form-submit">
+				</div>
+			</form>
+			<ul class="d-flex navbar-nav ms-auto mb-2 mb-lg-0">
+				{% if logged_in %}
+					<li class="nav-item">
+						<a href="/user" class="nav-link" data-drupal-link-system-path="user">My Account</a>
+					</li>
+					<li class="nav-item">
+						<a href="/user/logout" class="btn btn-outline-danger" data-drupal-link-system-path="user/logout">Logout</a>
+					</li>
+				{% else %}
+					<li class="nav-item">
+						<a href="/user/login" class="btn btn-outline-success" data-drupal-link-system-path="user/login">Login</a>
+					</li>
+				{% endif %}
+			</ul>
+		</div>
+	</div>
 </nav>

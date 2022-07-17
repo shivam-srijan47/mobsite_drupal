@@ -6,8 +6,8 @@ $color2 : #ffffff;
 $color3 : #7c7c7c;
 
 //Card of each phone display
-
-.card{
+.phone_card_container{
+  .card{
   border-radius: 0 !important;
   &__btn{
     height: 100%;
@@ -48,6 +48,7 @@ $color3 : #7c7c7c;
       }
     }
   }
+}
   & a{
     color: $color3;
     font-size: smaller;
@@ -125,4 +126,39 @@ $color3 : #7c7c7c;
     height: fit-content;
     background-color: $color3;
     font-size: smaller;
+}
+
+
+// Corousel
+.carousel {
+  background: #EEE;
+}
+.carousel-cell {
+  width: 66%;
+  height: 200px;
+  margin-right: 10px;
+  background: #8C8;
+  border-radius: 5px;
+  counter-increment: carousel-cell;
+}
+
+//grid of reviews
+
+.grid-container {
+  columns: 5 200px;
+  column-gap: 1.5rem;
+  width: 90%;
+  margin: 0 auto;
+  div {
+    // width: 150px;
+    display: inline-block;
+    width: 100%;
+    /* border: solid 1px black; */
+    padding: 5px;
+    border-radius: 8px;
+    img {
+      width: 50%;
+      border-radius: 50%;
+    }
+  }
 }
