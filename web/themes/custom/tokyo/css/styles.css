@@ -40,15 +40,15 @@
   border: none;
   outline: none;
 }
-.phone_card_container a {
+.phone_card_container .card a {
   color: #7c7c7c;
   font-size: smaller;
   text-decoration: none;
 }
-.phone_card_container a:hover {
+.phone_card_container .card a:hover {
   color: #6542f1;
 }
-.phone_card_container__phone_name {
+.phone_card_container .card__phone_name {
   white-space: nowrap;
   width: min-content;
   overflow: hidden;
