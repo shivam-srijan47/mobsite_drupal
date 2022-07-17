@@ -25,7 +25,7 @@
  * @todo Delete as part of https://www.drupal.org/node/3015623
  */
 #}
-{# {% if not is_inline %}
+{% if not is_inline %}
   {% include "field.html.twig" %}
 {% else %}
 <span{{ attributes }}>
@@ -33,4 +33,4 @@
     {{ item.content }}
   {%- endfor -%}
 </span>
-{% endif %} #}
+{% endif %}
