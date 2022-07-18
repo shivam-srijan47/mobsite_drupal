@@ -57,7 +57,7 @@
 .phone_card_container .disabled {
   pointer-events: none;
   cursor: not-allowed;
-  filter: brightness(140%);
+  filter: brightness(150%);
 }
 
 .taxonomy-term a {
