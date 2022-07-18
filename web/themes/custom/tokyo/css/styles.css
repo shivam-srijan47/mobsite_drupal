@@ -54,6 +54,11 @@
   overflow: hidden;
   text-overflow: ellipsis;
 }
+.phone_card_container .disabled {
+  pointer-events: none;
+  cursor: not-allowed;
+  filter: brightness(140%);
+}
 
 .taxonomy-term a {
   color: #7c7c7c;

@@ -2,6 +2,7 @@
 //     flex-grow:unset !important;
 // }
 $color1 : #6542f1;
+$color1-faded : #8066eb;
 $color2 : #ffffff;
 $color3 : #7c7c7c;
 
@@ -62,6 +63,11 @@ $color3 : #7c7c7c;
     overflow: hidden;
     text-overflow: ellipsis; 
   }
+}
+.disabled{
+  pointer-events: none;
+  cursor:not-allowed;
+  filter: brightness(140%);
 }
 }
 
