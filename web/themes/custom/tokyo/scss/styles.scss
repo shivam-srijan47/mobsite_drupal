@@ -5,8 +5,11 @@ $color1 : #6542f1;
 $color2 : #ffffff;
 $color3 : #7c7c7c;
 
+// *{
+//   outline: solid 1px greenyellow;
+// }
 //Card of each phone display
-.phone_card_container{
+.phone_card_container, .phone_full{
   .card{
   border-radius: 0 !important;
   &__btn{

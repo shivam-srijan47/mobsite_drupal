@@ -1,21 +1,21 @@
-.phone_card_container .card {
+.phone_card_container .card, .phone_full .card {
   border-radius: 0 !important;
 }
-.phone_card_container .card__btn {
+.phone_card_container .card__btn, .phone_full .card__btn {
   height: 100%;
   padding: 0;
   outline: none;
   border: none;
 }
-.phone_card_container .card__btn__outline {
+.phone_card_container .card__btn__outline, .phone_full .card__btn__outline {
   background-color: #ffffff;
 }
-.phone_card_container .card__btn__cta, .phone_card_container .card__btn__cta:hover {
+.phone_card_container .card__btn__cta, .phone_card_container .card__btn__cta:hover, .phone_full .card__btn__cta, .phone_full .card__btn__cta:hover {
   background-color: #6542f1;
   border: none;
   outline: none;
 }
-.phone_card_container .card__link {
+.phone_card_container .card__link, .phone_full .card__link {
   text-decoration: none;
   width: 100%;
   height: 100%;
@@ -26,35 +26,35 @@
   outline: none;
   border: none;
 }
-.phone_card_container .card__link#addtocart {
+.phone_card_container .card__link#addtocart, .phone_full .card__link#addtocart {
   color: #6542f1;
 }
-.phone_card_container .card__link#addtocart:hover, .phone_card_container .card__link#addtocart:active, .phone_card_container .card__link#addtocart:focus {
+.phone_card_container .card__link#addtocart:hover, .phone_card_container .card__link#addtocart:active, .phone_card_container .card__link#addtocart:focus, .phone_full .card__link#addtocart:hover, .phone_full .card__link#addtocart:active, .phone_full .card__link#addtocart:focus {
   border: none;
   outline: none;
 }
-.phone_card_container .card__link#buynow {
+.phone_card_container .card__link#buynow, .phone_full .card__link#buynow {
   color: #ffffff;
 }
-.phone_card_container .card__link#buynow:hover, .phone_card_container .card__link#buynow:active, .phone_card_container .card__link#buynow:focus {
+.phone_card_container .card__link#buynow:hover, .phone_card_container .card__link#buynow:active, .phone_card_container .card__link#buynow:focus, .phone_full .card__link#buynow:hover, .phone_full .card__link#buynow:active, .phone_full .card__link#buynow:focus {
   border: none;
   outline: none;
 }
-.phone_card_container .card a {
+.phone_card_container .card a, .phone_full .card a {
   color: #7c7c7c;
   font-size: smaller;
   text-decoration: none;
 }
-.phone_card_container .card a:hover {
+.phone_card_container .card a:hover, .phone_full .card a:hover {
   color: #6542f1;
 }
-.phone_card_container .card__phone_name {
+.phone_card_container .card__phone_name, .phone_full .card__phone_name {
   white-space: nowrap;
   width: min-content;
   overflow: hidden;
   text-overflow: ellipsis;
 }
-.phone_card_container .disabled {
+.phone_card_container .disabled, .phone_full .disabled {
   pointer-events: none;
   cursor: not-allowed;
   filter: brightness(150%);
