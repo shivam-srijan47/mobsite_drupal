@@ -1,44 +1,46 @@
-<article{{attributes.addClass('phone_card_container')}} style="margin:5px">
-	<div class="card shadow-sm" style="max-width:25rem">
-		<div class="d-flex justify-content-center p-2">
-			{{content.field_phone_image}}
-		</div>
-		<div class="card-body">
-			<div class="d-flex justify-content-between align-items-center">
-				<h5 class="card-title m-0 card__phone_name">{{node.field_phone_name.value}}</h5>
-				<h6 class="card-title m-0 px-2">{{content.field_phone_price.0}}</h6>
+{# <article{{attributes.addClass('phone_card_container')}} style="margin:5px"> #}
+	<div class="phone_card_container" style="margin:5px">
+		<div class="card shadow-sm" style="max-width:25rem">
+			<div class="d-flex justify-content-center p-2">
+				{{content.field_phone_image}}
 			</div>
-			<div class="m-0">
-				{{content.links}}
+			<div class="card-body">
+				<div class="d-flex justify-content-between align-items-center">
+					<h5 class="card-title m-0 card__phone_name">{{node.field_phone_name.value}}</h5>
+					<h6 class="card-title m-0 px-2">{{content.field_phone_price.0}}</h6>
+				</div>
+				<div class="m-0">
+					{{content.links}}
+				</div>
 			</div>
-		</div>
-		<ul class="list-group list-group-flush">
-			<li class="list-group-item">{{content.field_features.0}}</li>
-			<li class="list-group-item">{{content.field_features.1}}</li>
-			<li class="list-group-item">{{content.field_features.2}}</li>
-			<li class="list-group-item">{{content.field_features.3}}</li>
-		</ul>
+			<ul class="list-group list-group-flush">
+				<li class="list-group-item">{{content.field_features.0}}</li>
+				<li class="list-group-item">{{content.field_features.1}}</li>
+				<li class="list-group-item">{{content.field_features.2}}</li>
+				<li class="list-group-item">{{content.field_features.3}}</li>
+			</ul>
 
-		<div class="card-footer p-0">
-			<div class="container-fluid">
-				<div class="row text-center align-items-center h-100">
-					{% if node.field_phone_available.value %}
-						<div class="card__btn card__btn__outline col-sm-6">
-							<a class="btn p-3 card__link" id="addtocart" href="#">Add to cart</a>
-						</div>
-						<div class="card__btn card__btn__cta col-sm-6">
-							<a class="btn p-3 card__link" id="buynow" href="#">Buy Now</a>
-						</div>
-					{% else %}
-						<div class="card__btn card__btn__outline disabled col-sm-6" tabindex="-1">
-							<a class="btn p-3 card__link" id="addtocart" href="#" disabled>Add to cart</a>
-						</div>
-						<div class="card__btn card__btn__cta disabled col-sm-6" tabindex="-1">
-							<a class="btn p-3 card__link" id="buynow" href="#" disabled>Buy Now</a>
-						</div>
-					{% endif %}
+			<div class="card-footer p-0">
+				<div class="container-fluid">
+					<div class="row text-center align-items-center h-100">
+						{% if node.field_phone_available.value %}
+							<div class="card__btn card__btn__outline col-sm-6">
+								<a class="btn p-3 card__link" id="addtocart" href="#">Add to cart</a>
+							</div>
+							<div class="card__btn card__btn__cta col-sm-6">
+								<a class="btn p-3 card__link" id="buynow" href="#">Buy Now</a>
+							</div>
+						{% else %}
+							<div class="card__btn card__btn__outline disabled col-sm-6" tabindex="-1">
+								<a class="btn p-3 card__link" id="addtocart" href="#" disabled>Add to cart</a>
+							</div>
+							<div class="card__btn card__btn__cta disabled col-sm-6" tabindex="-1">
+								<a class="btn p-3 card__link" id="buynow" href="#" disabled>Buy Now</a>
+							</div>
+						{% endif %}
+					</div>
 				</div>
 			</div>
 		</div>
 	</div>
-</article>
+{# </article> #}
