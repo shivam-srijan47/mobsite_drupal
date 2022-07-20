@@ -8,6 +8,17 @@ $color3 : #7c7c7c;
 // *{
 //   outline: solid 1px greenyellow;
 // }
+
+.nav-item{
+  .active{
+    color:$color1 !important;
+  }
+  .nav-link:hover{
+    color:$color1 !important;
+  }
+}
+
+
 //Card of each phone display
 .phone_card_container, .phone_full{
   .card{

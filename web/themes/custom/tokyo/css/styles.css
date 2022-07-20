@@ -1,3 +1,10 @@
+.nav-item .active {
+  color: #6542f1 !important;
+}
+.nav-item .nav-link:hover {
+  color: #6542f1 !important;
+}
+
 .phone_card_container .card, .phone_full .card {
   border-radius: 0 !important;
 }

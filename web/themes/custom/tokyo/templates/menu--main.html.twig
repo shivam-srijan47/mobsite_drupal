@@ -31,10 +31,15 @@
 			<span class="navbar-toggler-icon"></span>
 		</button>
 		<div class="collapse navbar-collapse" id="navbarSupportedContent">
-			<ul class="navbar-nav me-auto mb-2 mb-lg-0">
+			<ul class="navbar-nav mb-2 mb-lg-0 justify-content-center gap-2 flex-grow-1">
+				{% set curr_path = path('<current>')%}
 				{% for item in items %}
 					<li{{item.attributes}} class="nav-item">
-						<a href={{item.url}} class="nav-link">{{item.title}}</a>
+						{% if ((item.url.toString() == curr_path) or ((item.url.toString() == '/') and (curr_path == '/node/17'))) %}
+							<a href={{item.url}} class="nav-link active">{{item.title}}</a>
+						{% else %}
+							<a href={{item.url}} class="nav-link">{{item.title}}</a>
+						{% endif %}
 						{% if item.below %}
 							{{ menus.menu_links(item.below, attributes, menu_level + 1) }}
 						{% endif %}
@@ -51,19 +56,19 @@
 				</div>
 			</form>
 			{# <ul class="d-flex navbar-nav ms-auto mb-2 mb-lg-0">
-				{% if logged_in %}
-					<li class="nav-item">
-						<a href="/user" class="nav-link" data-drupal-link-system-path="user">My Account</a>
-					</li>
-					<li class="nav-item">
-						<a href="/user/logout" class="btn btn-outline-danger" data-drupal-link-system-path="user/logout">Logout</a>
-					</li>
-				{% else %}
-					<li class="nav-item">
-						<a href="/user/login" class="btn btn-outline-success" data-drupal-link-system-path="user/login">Login</a>
-					</li>
-				{% endif %}
-			</ul> #}
+																						{% if logged_in %}
+																							<li class="nav-item">
+																								<a href="/user" class="nav-link" data-drupal-link-system-path="user">My Account</a>
+																							</li>
+																							<li class="nav-item">
+																								<a href="/user/logout" class="btn btn-outline-danger" data-drupal-link-system-path="user/logout">Logout</a>
+																							</li>
+																						{% else %}
+																							<li class="nav-item">
+																								<a href="/user/login" class="btn btn-outline-success" data-drupal-link-system-path="user/login">Login</a>
+																							</li>
+																						{% endif %}
+																					</ul> #}
 		</div>
 	</div>
 </nav>
